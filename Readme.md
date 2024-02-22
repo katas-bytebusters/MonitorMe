@@ -108,6 +108,7 @@ For the original requirements please follow [Original Requirements](./Requiremen
 
 - Hospital should have facility if any faulty patient monitoring device then capture patients vital manually or replace machine.
 - For Disaster recovery hospital should consider to have availability of servers in separate locations and technical team keep doing every 6 month DR activity.
+- Regular security assessments, penetration testing, and compliance audits are conducted to ensure adherence to industry standards and regulations.
 
 ## Proposed Architecture
 	Identified key architectural characteristics during requirements analysis as mentioned below
@@ -213,41 +214,42 @@ See below all the integration points
 ## Software Architect
 ![alt text](Images/SoftwareArchitect.png)
 
-1st Layer is Presentation Layer which will have a login screen for authentication and registration for Nurses & Medical staff. This feature allows users to register and identify their medical credentials and securely store their information in the application servers.
+* 1st Layer is Presentation Layer which will have a login screen for authentication and registration for Nurses & Medical staff. This feature allows users to register and identify their medical credentials and securely store their information in the application servers.
 
-2nd Layer is Business Layer which exposes the business logic implemented in the Business logic to potential consumers. We divided this layer into three blocks, in which the Healthcare Subsystem is used to check the data generated from the patient. The other block called Management Subsystem which has an administrative function, tasked with supervising and managing multiple patients, wearable devices and healthcare workers and last layer integrates with microservices one example is uploading patient snapshot to MyMedical Data
+* 2nd Layer is Business Layer which exposes the business logic implemented in the Business logic to potential consumers. We divided this layer into three blocks, in which the Healthcare Subsystem is used to check the data generated from the patient. The other block called Management Subsystem which has an administrative function, tasked with supervising and managing multiple patients, wearable devices and healthcare workers and last layer integrates with microservices one example is uploading patient snapshot to MyMedical Data
 
-3rd Layer is Data Access Layer which contains components to abstract the logic required to access the data stores. Such components provide common data access functionality, isolating the upper layers from the specific database technology, and making the application easier to maintain and configure.
+* 3rd Layer is Data Access Layer which contains components to abstract the logic required to access the data stores. Such components provide common data access functionality, isolating the upper layers from the specific database technology, and making the application easier to maintain and configure.
 
-4th Layer is Persistence Layer which provides several advantages to the software since it is more efficient to save and retrieve data and provide for the whole application. In our context, we have four data sources, namely: Patient vital tracking Devices, patient data, Health Data,  Logging Data and Timeseries DB
+* 4th Layer is Persistence Layer which provides several advantages to the software since it is more efficient to save and retrieve data and provide for the whole application. In our context, we have four data sources, namely: Patient vital tracking Devices, patient data, Health Data,  Logging Data and Timeseries DB
 
 One advantage of the proposed  application in the solution framework is the interaction with the end users. Using the platform, Medical healthcare workers can track multiple patients health conditions in a centralized and reliable manner. Note that the proposed real-time monitoring platform can be integrated into vital tracking devices. It is essential to highlight that a distributed system such as this proposed MonitorMe application needs a fully distributed security system.
 
 
 ### Data flow/Information Flow Diagram
 
-Based on functional requirements we identified data flow our application should support. The data flow for our application begins with integrating Data Ingesion Pipeline with Patient Monitoring Equipments to capture the patient's vital information.
+Based on functional requirements we identified data flow **MonitorME** application should support. The data flow for our application begins with integrating Data Ingesion Pipeline with Patient Monitoring Equipments to capture the patient's vital information.
 
-* Data Ingesion Pipeline    - Collects data from various vital sign monitoring devices via automated feeds, ensuring accurate and timely data capture, process/
-								transform the data and publish to multiple downstream systems in real time.
+* **Data Ingesion Pipeline**: Collects data from various vital sign monitoring devices via automated feeds, ensuring accurate and timely data capture, process/transform the data and publish to multiple downstream systems in real time.
 
-* RealTime stream processor - Stream the real time data on the monitoring screen at Nursing stations
+* **RealTime stream processor**: Stream the real time data on the monitoring screen at Nursing stations
 
-* Data Analyzer/Rule Engine - Analyse the vitals based on configured threashold and alert will be sent to Notification publisher in case of anomaly.
+* **Data Analyzer/Rule Engine**: Analyse the vitals based on configured threashold and alert will be sent to Notification publisher in case of anomaly.
 
-* Notification publisher   - Push Notification to registed MedicalStaff on StayHealth Mobile device. 
+* **Notification publisher**: Push Notification to registered Medical Professionals on StayHealth Mobile device as well as on the consolidated monitoring screeen. 
 
-* Data Storage             - Time series data will be stored for futher analysis by Medical Staff.
+* **Data Storage**: Time series data will be stored for further analysis by the Medical Professionals.
 
-* Snapshot Component 	   - APIs are exposed to download the Patient's vitals snapshot and upload to MyMedicalData system using secure HTTP API call.	
+* **Snapshot Component**: APIs will be exposed to download the Patient's vitals snapshot and can be uploaded to MyMedicalData using secure HTTP API call.
+
+* **Data API**: This will be used to query analytical data by the Medical Professional to anyalyze patient's vitals.
+
 ![Data Flow](Images/DataFlow.png)
 
 
 ### System Architecture
 
 
-The diagram represents the individual illustrating the workflow of a medical software system designed to monitor and manage patient vital signs in real-time. 
-MonitorME is responsible for sending real-time updates regarding patients' vital signs to a centralized monitoring screen. 
+The diagram represents the workflow of a medical software system designed to monitor and manage patient vital signs in real-time. MonitorME is responsible for sending real-time updates regarding patients' vital signs to a centralized monitoring screen. 
 
 * Data Transmitter process the collected vital signs data and transmit to Kafka stream(a distributed event streaming platform that handles real-time data feeds) 
 
@@ -259,14 +261,14 @@ MonitorME is responsible for sending real-time updates regarding patients' vital
 * Realtime stream processor also stores vital sign to Timeseries database which is used by Data Analyzer as well as Snapshot Processor
 
 * Data Analyzer
-	Rule Engine	      - A critical component that aids in adjusting alerts based on specific parameters, ensuring that the system remains adaptive and responsive 
+	Rule Engine: A critical component that aids in adjusting alerts based on specific parameters, ensuring that the system remains adaptive and responsive 
 					    to varying patient conditions.
-	Stream Analytics  - Analyze the patients' vitals against the rules from Rule engine and Sent notification to Notification Publisher to notify the Mecical staff. 
-	Alert Config APIs - To update the alert configurtion
+	Stream Analytics: Analyze the patients' vitals against the rules from Rule engine and Sent notification to Notification Publisher to notify the Mecical staff. 
+	Alert Config APIs: To update the alert configurtion
 
 * Notification Publisher push the notification to Medical professional devices like Stay Healthy Mobile App.
 
-* Snapshot processor - Medical professionals can request snapshots of vital signs data and sync to MyMedicalData via Secure HTTP Gateway API
+* Snapshot processor: Medical professionals can request snapshots of vital signs data and sync to MyMedicalData via Secure HTTP Gateway API
 
 Overall, the diagram meticulously outlines the interconnected components and processes of a sophisticated software flow dedicated to real-time monitoring, analysis, and management of patient vital signs, emphasizing its utility in enhancing healthcare delivery and patient monitoring practices.
 
@@ -290,13 +292,39 @@ Describes how the system will be operated when it is running in the hospital fac
 
 
 ## Deployment Viewpoint
-SOME TEXT HeRE ??????????????????????????????????????????
+
+Deploying a real-time dashboard for monitoring hospital patient vitals on-premises requires consideration of various factors to ensure reliability and security. To ease the deployment process all the components will be packaged together that can be easily deployed using straightforward instructions.
+
+**Hardware Infrastructure**: Ensure that the hardware meets performance and scalability needs, considering factors such as CPU, memory, storage, and network bandwidth.
+
+**Security and Compliance**: 
+* User authentication SSO/LDAP strategies should be enforced along with Role-Based Access Control (RBAC) to limit access to confidential data.
+* Apply current firewall policies/rules to safeguard patient data. This should be done in conjunction with implementing TLS/SSL protocol for encrypted data transmission. 
+* Data encryption, access controls, and audit trails are implemented to protect sensitive patient information.
+
+
+**High Availability and Disaster Recovery**: MonitorME app will be configured with high availability and disaster recovery mechanisms to ensure continuous availability of the real-time dashboard in case of hardware failures or natural disasters. Following factors will be considered to minimize downtime and data loss such as
+* Data replication
+* Load balancing
+* Failover clustering
+
+**Deployment Environment**: We preferred to use Kubernetes as orchestration tool to manage containerized applications to ensure scalability and fault tolerance.
+
+**Monitoring and Alerting**:
+* Continuous monitoring of system health, performance metrics, and data quality is crucial.
+* Prometheus and Grafana will be used for monitoring and alerting.
+* Alerts will be configured to notify system administrators in case of system failures, performance degradation, or data discrepancies.
+
+**Testing and Validation**: 
+* Comprehensive testing and verification of the real-time dashboard application to ensure its reliability, accuracy, and performance under various conditions.
+* Execute load testing, security testing, and user acceptance testing (UAT) to detect and rectify any concerns if there is any.
+
+We can effectively deploy a real-time dashboard for monitoring hospital patient vitals on-premises, providing healthcare professionals with timely insights to improve patient care and outcomes while maintaining data security and regulatory compliance.
 
 ![Deployment ViewPoint](Images/DeploymentDiagram.png)
 
 ## Technology Stack
-SOME Text Here ???????????????????????
-
+Below is the technology diagram which we prefer to develop MonitorMe app.
 ![Technology Stack](Images/MonitorMeTechStack.png)
 
 ## Security Perspective
