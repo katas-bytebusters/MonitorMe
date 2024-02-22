@@ -228,18 +228,18 @@ One advantage of the proposed  application in the solution framework is the inte
 
 Based on functional requirements we identified data flow our application should support. The data flow for our application begins with integrating Data Ingesion Pipeline with Patient Monitoring Equipments to capture the patient's vital information.
 
-	. Data Ingesion Pipeline    - Collects data from various vital sign monitoring devices via automated feeds, ensuring accurate and timely data capture, process/
-	                              transform the data and publish to multiple downstream systems in real time.
+* Data Ingesion Pipeline    - Collects data from various vital sign monitoring devices via automated feeds, ensuring accurate and timely data capture, process/
+								transform the data and publish to multiple downstream systems in real time.
 
-	. RealTime stream processor - Stream the real time data on the monitoring screen at Nursing stations
+* RealTime stream processor - Stream the real time data on the monitoring screen at Nursing stations
 
-	. Data Analyzer/Rule Engine - Analyse the vitals based on configured threashold and alert will be sent to Notification publisher in case of anomaly.
+* Data Analyzer/Rule Engine - Analyse the vitals based on configured threashold and alert will be sent to Notification publisher in case of anomaly.
 
-	. Notification publisher   - Push Notification to registed MedicalStaff on StayHealth Mobile device. 
+* Notification publisher   - Push Notification to registed MedicalStaff on StayHealth Mobile device. 
 
-	. Data Storage             - Time series data will be stored for futher analysis by Medical Staff.
-	
-	. Snapshot Component 	   - APIs are exposed to download the Patient's vitals snapshot and upload to MyMedicalData system using secure HTTP API call.	
+* Data Storage             - Time series data will be stored for futher analysis by Medical Staff.
+
+* Snapshot Component 	   - APIs are exposed to download the Patient's vitals snapshot and upload to MyMedicalData system using secure HTTP API call.	
 ![Data Flow](Images/DataFlow.png)
 
 
@@ -249,24 +249,24 @@ Based on functional requirements we identified data flow our application should 
 The diagram represents the individual illustrating the workflow of a medical software system designed to monitor and manage patient vital signs in real-time. 
 MonitorME is responsible for sending real-time updates regarding patients' vital signs to a centralized monitoring screen. 
 
-. Data Transmitter process the collected vital signs data and transmit to Kafka stream(a distributed event streaming platform that handles real-time data feeds) 
+* Data Transmitter process the collected vital signs data and transmit to Kafka stream(a distributed event streaming platform that handles real-time data feeds) 
 
-. Kafka Stream send the data to Realtime stream processor (Flink) 
+* Kafka Stream send the data to Realtime stream processor (Flink) 
 
-. Realtime stream processor send the feed to Monitoring Screen. This process involves the use of a "VitalSign API" and a "VitalSign App" that collectively  
+* Realtime stream processor send the feed to Monitoring Screen. This process involves the use of a "VitalSign API" and a "VitalSign App" that collectively  
   facilitate the querying and receiving of vital signs data, which is then rotated and displayed on the monitoring interface, also adjust the display as per requirement to display 20 patients every 5 seconds.
 
-. Realtime stream processor also stores vital sign to Timeseries database which is used by Data Analyzer as well as Snapshot Processor
+* Realtime stream processor also stores vital sign to Timeseries database which is used by Data Analyzer as well as Snapshot Processor
 
-. Data Analyzer
+* Data Analyzer
 	Rule Engine	      - A critical component that aids in adjusting alerts based on specific parameters, ensuring that the system remains adaptive and responsive 
 					    to varying patient conditions.
 	Stream Analytics  - Analyze the patients' vitals against the rules from Rule engine and Sent notification to Notification Publisher to notify the Mecical staff. 
 	Alert Config APIs - To update the alert configurtion
 
-. Notification Publisher push the notification to Medical professional devices like Stay Healthy Mobile App.
+* Notification Publisher push the notification to Medical professional devices like Stay Healthy Mobile App.
 
-. Snapshot processor - Medical professionals can request snapshots of vital signs data and sync to MyMedicalData via Secure HTTP Gateway API
+* Snapshot processor - Medical professionals can request snapshots of vital signs data and sync to MyMedicalData via Secure HTTP Gateway API
 
 Overall, the diagram meticulously outlines the interconnected components and processes of a sophisticated software flow dedicated to real-time monitoring, analysis, and management of patient vital signs, emphasizing its utility in enhancing healthcare delivery and patient monitoring practices.
 
