@@ -229,7 +229,7 @@ One advantage of the proposed  application in the solution framework is the inte
 
 Based on functional requirements we identified data flow **MonitorMe** application should support. The data flow for our application begins with integrating Data Ingesion Pipeline with Patient Monitoring Equipments to capture the patient's vital information.
 
-* **Data Ingesion Pipeline**: Collects data from various vital sign monitoring devices via automated feeds, ensuring accurate and timely data capture, process/transform the data and publish to multiple downstream systems in real time.
+* **Data Ingestion Pipeline**: Collects data from various vital sign monitoring devices via automated feeds, ensuring accurate and timely data capture, process/transform the data and publish to multiple downstream systems in real time.
 
 * **RealTime stream processor**: Stream the real time data on the monitoring screen at Nursing stations
 
