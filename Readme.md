@@ -233,7 +233,7 @@ Based on functional requirements we identified data flow **MonitorMe** applicati
 
 * **RealTime stream processor**: Stream the real time data on the monitoring screen at Nursing stations
 
-* **Data Analyzer/Rule Engine**: Analyse the vitals based on configured threashold and alert will be sent to Notification publisher in case of anomaly.
+* **Data Analyzer/Rule Engine**: Analyze the vitals based on configured threshold and alert will be sent to Notification publisher in case of anomaly.
 
 * **Notification publisher**: Push Notification to registered Medical Professionals on StayHealth Mobile device as well as on the consolidated monitoring screeen. 
 
@@ -241,7 +241,7 @@ Based on functional requirements we identified data flow **MonitorMe** applicati
 
 * **Snapshot Component**: APIs will be exposed to download the Patient's vitals snapshot and can be uploaded to MyMedicalData using secure HTTP API call.
 
-* **Data API**: This will be used to query analytical data by the Medical Professional to anyalyze patient's vitals.
+* **Data API**: This will be used to query analytical data by the Medical Professional to analyze patient's vitals.
 
 ![Data Flow](Images/DataFlow.png)
 
@@ -251,7 +251,7 @@ Based on functional requirements we identified data flow **MonitorMe** applicati
 
 The diagram represents the workflow of a medical software system designed to monitor and manage patient vital signs in real-time. MonitorMe is responsible for sending real-time updates regarding patients' vital signs to a centralized monitoring screen. 
 
-* Data Transmitter process the collected vital signs data and transmit to Kafka stream(a distributed event streaming platform that handles real-time data feeds) 
+* Data Transmitter process the collected vital signs data and transmit to Kafka stream (a distributed event streaming platform that handles real-time data feeds) 
 
 * Kafka Stream send the data to Realtime stream processor (Flink) 
 
@@ -261,10 +261,11 @@ The diagram represents the workflow of a medical software system designed to mon
 * Realtime stream processor also stores vital sign to Timeseries database which is used by Data Analyzer as well as Snapshot Processor
 
 * Data Analyzer
-	Rule Engine: A critical component that aids in adjusting alerts based on specific parameters, ensuring that the system remains adaptive and responsive 
-					    to varying patient conditions.
-	Stream Analytics: Analyze the patients' vitals against the rules from Rule engine and Sent notification to Notification Publisher to notify the Mecical staff. 
-	Alert Config APIs: To update the alert configurtion
+	Rule Engine: A critical component that aids in adjusting alerts based on specific parameters, ensuring that the system remains adaptive and responsive to varying patient conditions.
+	
+* Stream Analytics: Analyze the patients' vitals against the rules from Rule engine and Sent notification to Notification Publisher to notify the Mecical staff.
+
+* Alert Config APIs: To update the alert configuration
 
 * Notification Publisher push the notification to Medical professional devices like Stay Healthy Mobile App.
 
