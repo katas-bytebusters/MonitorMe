@@ -44,13 +44,5 @@ Each ADR follows this structure:
   - Positive: Improved performance for time-based data operations.
   - Negative: Adds to the technological diversity, increasing operational complexity.
 
-### ADR 5: Utilizing React for Consolidated Monitoring Screen UI
-- **Status**: Accepted
-- **Context**: Need for a responsive and dynamic UI for displaying real-time and historical patient data.
-- **Decision**: Adopt React for its efficient update mechanisms and component-based architecture.
-- **Consequences**:
-  - Positive: Facilitates development of an interactive and responsive UI.
-  - Negative: Requires React expertise for development and maintenance.
-
 ## Summary
 These ADRs provide a framework for understanding the architectural and technological choices made in developing the MonitorMe system, ensuring alignment with the project's goals and requirements.
