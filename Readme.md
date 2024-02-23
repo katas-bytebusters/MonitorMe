@@ -49,10 +49,10 @@ Team ByteBuster. We are all about proposing solutions to make hospitals a little
 
 
 ### Reference Links:
-- https://dev.to/mage_ai/apache-flink-vs-apache-spark-a-detailed-comparison-for-data-processing-36d3
-- https://docs.flutter.dev/get-started/flutter-for/react-native-devs
-- https://db-engines.com/en/system/InfluxDB%3BPrometheus%3BTimescaleDB
-- https://medium.com/@nautilustechlabs/ionic-vs-react-native-vs-flutter-whats-best-for-2023-a8ae061d5542
+- [Apache Flink / Apache Spark, A details comparison for data processing](https://dev.to/mage_ai/apache-flink-vs-apache-spark-a-detailed-comparison-for-data-processing-36d3)
+- [Flutter for Desktop and native mobile app development](https://docs.flutter.dev/get-started/flutter-for/react-native-devs)
+- [Comparison InfluxDB vs. Prometheus vs. TimescaleDB](https://db-engines.com/en/system/InfluxDB%3BPrometheus%3BTimescaleDB)
+- [Flutter vs. React Native vs. Ionic](https://medium.com/@nautilustechlabs/ionic-vs-react-native-vs-flutter-whats-best-for-2023-a8ae061d5542)
 
 
 ## Requirements
@@ -70,15 +70,15 @@ For the original requirements please follow [Original Requirements](./Requiremen
 
 - **Patient Data Snapshot Upload**: Facilitate the upload of patient snapshots to the MyMedicalData system for record-keeping.
 
-- **Data Collection and Transmission**:
+- **Data Collection and Transmission**: It collects data from the vital signs machine and transmits it to the nursing station's consolidated monitoring screen.
 
-- **Data Recording and Storage**:
+- **Data Recording and Storage**: Store the time series data in a database for analytic queries by the medical staff.
 
-- **Analyze each patient’s vital signs in real-time**:
+- **Analyze each patient’s vital signs in real-time**: The ability to analyze patient data in real-time, compare it to given threshold limits, and send notifications to the nurse station and mobile devices.
 
-- **Deployment**:
+- **Deployment**: Deployment of MonitorME should consider an on-premises environment.
 
-- **Confidentiality**:
+- **Confidentiality**: Patient data should be secure.
 
 
 ### [Non-functional Requirements]((./Requirements/SystemRequirements.md))
@@ -117,13 +117,13 @@ For the original requirements please follow [Original Requirements](./Requiremen
 
 | Top     | Characterstic       | Details                                                                                            |
 | ------- | ------------------- | -------------------------------------------------------------------------------------------        |
-|  X      | Performance         | Optimizing performance and enhancing user experience is crucial for the success of any platform.   |
-|  X      | Fault Tolerance     | Fault tolerance is essential in healthcare system. System failures can lead to potential harm to human lives.|
-|  X      | Scalability         | Scalability allows healthcare systems to handle seasonal peaks, and unexpected expansion without compromising quality or reliability.|
-|         | Deploybility        |                                                                                             |
-|         | Configurability     |                                                                                             |
-|         | Data Integrity      |                                                                                             |
-|         | Adaptability        |                                                                                             |
+|  X      | Performance         | The MonitorME app should perform efficiently to deliver real-time patient vital data.   |
+|  X      | Fault Tolerance     | This is critical. Even if any of the vital sign devices fail, MonitorME must continue to function for other vital monitoring tasks, including monitoring, recording, analyzing, and issuing alerts.|
+|  X      | Scalability         | MonitorME should have the capability to scale in the future to accommodate an increased patient load.|
+|         | Deploybility        | Deployment should consider an on-premises environment.|
+|         | Configurability     | MonitorME's vital sign machine or rule engine should be configurable.|
+|         | Data Integrity      | Data should be secure, and transmitting data from one environment to another should be encrypted|
+|         | Adaptability        | The MonitorME app should possess the flexibility to easily incorporate new devices, rules, or other elements as required.|
 
 
 The team chose an event-driven architecture as the best fit, in line with the main characteristics identified. 
@@ -333,14 +333,14 @@ As specified in the requirements, given that this is an  on-premises application
 * **Secure Snapshot Upload**: Establish a secure connection for uploading snapshot data to MyMedicalData using secure http connection.
 * **Role Based Security**: We are required to implement role-based security measures to differentiate between medical professionals using the Consolidated Screen, Analytical Screen, and mobile devices.
 
-# Architecture Decision Records(ADR)
+## Architecture Decision Records(ADR)
 
-## [ADR 1](ADRs/ADR1.md) Use Apache Kafka for Data Ingestion
-## [ADR 2](ADRs/ADR2.md) Implement Apache Flink for Real-Time Data Processing
-## [ADR 3](ADRs/ADR3.md) Adoption of Flutter for Mobile App Development
-## [ADR 4](ADRs/ADR4.md) Selecting InfluxDB for Time-Series Data Storage
-## [ADR 5](ADRs/ADR5.md) Kubernetes for Container Orchestration
-## [ADR 6](ADRs/ADR6.md) Utilizing React for Consolidated Monitoring Screen UI
+### [ADR 1](ADRs/ADR1.md) Use Apache Kafka for Data Ingestion
+### [ADR 2](ADRs/ADR2.md) Implement Apache Flink for Real-Time Data Processing
+### [ADR 3](ADRs/ADR3.md) Adoption of Flutter for Mobile App Development
+### [ADR 4](ADRs/ADR4.md) Selecting InfluxDB for Time-Series Data Storage
+### [ADR 5](ADRs/ADR5.md) Kubernetes for Container Orchestration
+### [ADR 6](ADRs/ADR6.md) Utilizing React for Consolidated Monitoring Screen UI
 
 
 
