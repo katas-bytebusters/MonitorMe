@@ -118,6 +118,9 @@ MonitorMe system interacts with a diverse range of users and systems, each playi
 
 This document includes comprehensive information on the various actors such as **Nurses/Clinical Staff, Medical Professionals (Doctors/Physicians), Patients, Vital Sign Monitoring Devices,** and more, outlining their specific roles and how they interact with our system. Understanding these actors is crucial for grasping the full scope of our project's impact and its operational dynamics.
 
+Additionally, below is a pictorial representation of the actors and their interactions within our system:
+![ActorsAction](Images/ActorsActions.png)
+
 ## Proposed Architecture
 Identified key architectural characteristics during requirements analysis as mentioned below. 
 Additional details are covered here: [System Components Overview](./Requirements/SystemComponentsOverview.md)
