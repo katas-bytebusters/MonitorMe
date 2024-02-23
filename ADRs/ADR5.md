@@ -1,7 +1,7 @@
-### ADR 5: Kubernetes for Container Orchestration
+### ADR 5: Utilizing React for Consolidated Monitoring Screen UI
 - **Status**: Accepted
-- **Context**: System components are containerized, requiring an orchestration solution for scalability and reliability.
-- **Decision**: Implement Kubernetes for container orchestration.
+- **Context**: Need for a responsive and dynamic UI for displaying real-time and historical patient data.
+- **Decision**: Adopt React for its efficient update mechanisms and component-based architecture.
 - **Consequences**:
-  - Positive: Enhances scalability, deployability, and manageability of applications.
-  - Negative: Complexity of Kubernetes management and configuration.
+  - Positive: Facilitates development of an interactive and responsive UI.
+  - Negative: Requires React expertise for development and maintenance.

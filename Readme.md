@@ -336,8 +336,7 @@ As specified in the requirements, given that this is an  on-premises application
 ### [ADR 2](ADRs/ADR2.md) Implement Apache Flink for Real-Time Data Processing
 ### [ADR 3](ADRs/ADR3.md) Adoption of Flutter for Mobile App Development
 ### [ADR 4](ADRs/ADR4.md) Selecting InfluxDB for Time-Series Data Storage
-### [ADR 5](ADRs/ADR5.md) Kubernetes for Container Orchestration
-### [ADR 6](ADRs/ADR6.md) Utilizing React for Consolidated Monitoring Screen UI
+### [ADR 5](ADRs/ADR5.md) Utilizing React for Consolidated Monitoring Screen UI
 
 
 

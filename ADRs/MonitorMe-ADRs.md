@@ -44,15 +44,7 @@ Each ADR follows this structure:
   - Positive: Improved performance for time-based data operations.
   - Negative: Adds to the technological diversity, increasing operational complexity.
 
-### ADR 5: Kubernetes for Container Orchestration
-- **Status**: Accepted
-- **Context**: System components are containerized, requiring an orchestration solution for scalability and reliability.
-- **Decision**: Implement Kubernetes for container orchestration.
-- **Consequences**:
-  - Positive: Enhances scalability, deployability, and manageability of applications.
-  - Negative: Complexity of Kubernetes management and configuration.
-
-### ADR 6: Utilizing React for Consolidated Monitoring Screen UI
+### ADR 5: Utilizing React for Consolidated Monitoring Screen UI
 - **Status**: Accepted
 - **Context**: Need for a responsive and dynamic UI for displaying real-time and historical patient data.
 - **Decision**: Adopt React for its efficient update mechanisms and component-based architecture.
