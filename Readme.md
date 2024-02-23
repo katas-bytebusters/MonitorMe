@@ -6,19 +6,20 @@
 	 - [**Reference Links**](#reference-links)
 2.  [**Requirement**](#requirements)
      - [**Functional Requirements**](#functional-requirements)
-     - [**Non Functional Requirements**](#non-functional-requirements)
+     - [**Non-Functional Requirements**](#non-functional-requirements)
 	 - [**Assumptions**](#assumptions)
-3.  [**Proposed Architecture**](#proposed-architecture)
+3.  [**Actors**](#actors)
+4.  [**Proposed Architecture**](#proposed-architecture)
 	 - [**Characteristics**](#characteristics)
-4.  [**Functional Viewpoint**](#functional-viewpoint)
-5.  [**System Component**](#system-component)
-6.  [**System Context**](#system-context)
-7.  [**Software Architect**](#software-architect)
-8.  [**Data flow/Information Flow Diagram**](#data-flowinformation-flow-diagram)
-9.  [**System Architecture**](#system-architecture)
-10. [**Operational Viewpoint**](#operational-viewpoint)
-11. [**Deployment Viewpoint**](#deployment-viewpoint)
-12. [**Architecture Decision Records(ADR)**](#architecture-decision-recordsadr)
+5.  [**Functional Viewpoint**](#functional-viewpoint)
+6.  [**System Component**](#system-component)
+7.  [**System Context**](#system-context)
+8.  [**Software Architect**](#software-architect)
+9.  [**Data flow/Information Flow Diagram**](#data-flowinformation-flow-diagram)
+10.  [**System Architecture**](#system-architecture)
+11. [**Operational Viewpoint**](#operational-viewpoint)
+12. [**Deployment Viewpoint**](#deployment-viewpoint)
+13. [**Architecture Decision Records(ADR)**](#architecture-decision-recordsadr)
 
 
 ## Welcome
@@ -83,7 +84,7 @@ For the original requirements please follow [here](./Requirements/OriginalRequir
 - **Confidentiality**: Patient data should be secure.
 
 
-## Non-functional Requirements
+## Non-Functional Requirements
 
 - **Performance**: Ensure processing and display of vital signs data within 1 second for real-time monitoring efficiency.
 
@@ -111,6 +112,11 @@ For the original requirements please follow [here](./Requirements/OriginalRequir
 - Hospital should have facility if any faulty patient monitoring device, then capture patients vital manually or replace machine.
 - For Disaster recovery, hospital should consider to have availability of servers in separate locations and technical team keep doing every 6 month DR activity.
 - Regular security assessments, penetration testing, and compliance audits are conducted to ensure adherence to industry standards and regulations.
+
+## Actors
+MonitorMe system interacts with a diverse range of users and systems, each playing a critical role in its functionality and operational ecosystem. To provide a clear understanding of these interactions and the expectations from each actor involved with our project, we have detailed the roles, needs, and interactions of each actor in our dedicated [Actors](./Actors/Actors.md) section.
+
+This document includes comprehensive information on the various actors such as Nurses/Clinical Staff, Medical Professionals (Doctors/Physicians), Patients, Vital Sign Monitoring Devices, and more, outlining their specific roles and how they interact with our system. Understanding these actors is crucial for grasping the full scope of our project's impact and its operational dynamics.
 
 ## Proposed Architecture
 Identified key architectural characteristics during requirements analysis as mentioned below. 
@@ -340,7 +346,6 @@ As specified in the requirements, given that this is an  on-premises application
 ### [ADR 2](ADRs/ADR2.md) Implement Apache Flink for Real-Time Data Processing
 ### [ADR 3](ADRs/ADR3.md) Adoption of Flutter for Mobile App Development
 ### [ADR 4](ADRs/ADR4.md) Selecting InfluxDB for Time-Series Data Storage
-### [ADR 5](ADRs/ADR5.md) Utilizing React for Consolidated Monitoring Screen UI
 
 
 
