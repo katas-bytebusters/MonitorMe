@@ -108,7 +108,8 @@ For the original requirements, please follow [here](./Requirements/OriginalRequi
 - **Adaptability**: - Monitor me is a new line of business for StayHealthy, this new app should be able to adapt new changes to meet the market demands.
  
 ## Architecture Characteristics Analysis
-The foundation of our system's design is detailed in the "Architecture Characteristics Analysis" document, where we outline the essential attributes such as scalability, security, reliability, and performance that our architecture aims to embody. This analysis ensures our architecture is robust, adaptable, and aligned with both current and future needs. Detailed analysis is captured [here](./Requirements/SystemRequirements.md)
+The foundation of our system's design is detailed in the "Architecture Characteristics Analysis" document, where we outline the essential attributes such as scalability, security, reliability, and performance that our architecture aims to embody. This analysis ensures our architecture is robust, adaptable, and aligned with both current and future needs. 
+Detailed analysis is captured [here](./Requirements/SystemRequirements.md).
 
 ## Assumptions
 
