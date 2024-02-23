@@ -61,7 +61,7 @@ Team ByteBusters is all about devising solutions to make hospitals smarter, safe
 
 For the original requirements please follow [here](./Requirements/OriginalRequirements.md)
 
-### Functional Requirements
+## Functional Requirements
 - **Real-Time Data Capture**: Capture vital signs data in real-time from various monitoring devices.
 
 - **Data Analysis and Alert Generation**: Analyze captured data to identify trends, detect anomalies, and generate alerts for abnormal readings.
@@ -101,15 +101,15 @@ For the original requirements please follow [here](./Requirements/OriginalRequir
 
 - **Usability**: Provide an intuitive UI for medical professionals, enabling quick access to vital information and easy alert management.
 
-- **Data Integrity**: Vital sign data analyzed  and recorded must be as accurate as possible. After all, human lives are at stake. 
+- **Data Integrity**: Vital sign data analyzed and recorded must be as accurate as possible. After all, human lives are at stake. 
 
 - **Adaptability**: - Monitor me is a new line of business for StayHealthy, this new app should be able to adapt new changes to meet the market demands.
  
 
-### Assumptions
+## Assumptions
 
-- Hospital should have facility if any faulty patient monitoring device then capture patients vital manually or replace machine.
-- For Disaster recovery hospital should consider to have availability of servers in separate locations and technical team keep doing every 6 month DR activity.
+- Hospital should have facility if any faulty patient monitoring device, then capture patients vital manually or replace machine.
+- For Disaster recovery, hospital should consider to have availability of servers in separate locations and technical team keep doing every 6 month DR activity.
 - Regular security assessments, penetration testing, and compliance audits are conducted to ensure adherence to industry standards and regulations.
 
 ## Proposed Architecture
@@ -118,7 +118,7 @@ Additional details are covered here: [System Components Overview](./Requirements
 
 ### **Characteristics**
 
-| Top     | Characterstic       | Details                                                                                            |
+| Top     | Characteristics       | Details                                                                                            |
 | ------- | ------------------- | -------------------------------------------------------------------------------------------        |
 |  X      | Performance         | The MonitorMe app should perform efficiently to deliver real-time patient vital data.   |
 |  X      | Fault Tolerance     | This is critical. Even if any of the vital sign devices fail, MonitorMe must continue to function for other vital monitoring tasks, including monitoring, recording, analyzing, and issuing alerts.|
@@ -129,7 +129,7 @@ Additional details are covered here: [System Components Overview](./Requirements
 |         | Adaptability        | The MonitorMe app should possess the flexibility to easily incorporate new devices, rules, or other elements as required.|
 
 
-The team chose an event-driven architecture as the best fit, in line with the main characteristics identified. 
+The team chose an <u>event-driven architecture</u> as the best fit, in line with the main characteristics identified. 
 
 ![Architecture Styles Worksheet](Images/ArchitectureStylesworksheet.png)
 
@@ -225,15 +225,15 @@ See below all the integration points
 One advantage of the proposed  application in the solution framework is the interaction with the end users. Using the platform, Medical healthcare workers can track multiple patients health conditions in a centralized and reliable manner. Note that the proposed real-time monitoring platform can be integrated into vital tracking devices. It is essential to highlight that a distributed system such as this proposed MonitorMe application needs a fully distributed security system.
 
 
-### Data flow/Information Flow Diagram
+## Data flow/Information Flow Diagram
 
 Based on functional requirements we identified data flow **MonitorMe** application should support. The data flow for our application begins with integrating Data Ingesion Pipeline with Patient Monitoring Equipments to capture the patient's vital information.
 
-* **Data Ingesion Pipeline**: Collects data from various vital sign monitoring devices via automated feeds, ensuring accurate and timely data capture, process/transform the data and publish to multiple downstream systems in real time.
+* **Data Ingestion Pipeline**: Collects data from various vital sign monitoring devices via automated feeds, ensuring accurate and timely data capture, process/transform the data and publish to multiple downstream systems in real time.
 
 * **RealTime stream processor**: Stream the real time data on the monitoring screen at Nursing stations
 
-* **Data Analyzer/Rule Engine**: Analyse the vitals based on configured threashold and alert will be sent to Notification publisher in case of anomaly.
+* **Data Analyzer/Rule Engine**: Analyze the vitals based on configured threshold and alert will be sent to Notification publisher in case of anomaly.
 
 * **Notification publisher**: Push Notification to registered Medical Professionals on StayHealth Mobile device as well as on the consolidated monitoring screeen. 
 
@@ -241,7 +241,7 @@ Based on functional requirements we identified data flow **MonitorMe** applicati
 
 * **Snapshot Component**: APIs will be exposed to download the Patient's vitals snapshot and can be uploaded to MyMedicalData using secure HTTP API call.
 
-* **Data API**: This will be used to query analytical data by the Medical Professional to anyalyze patient's vitals.
+* **Data API**: This will be used to query analytical data by the Medical Professional to analyze patient's vitals.
 
 ![Data Flow](Images/DataFlow.png)
 
@@ -251,7 +251,7 @@ Based on functional requirements we identified data flow **MonitorMe** applicati
 
 The diagram represents the workflow of a medical software system designed to monitor and manage patient vital signs in real-time. MonitorMe is responsible for sending real-time updates regarding patients' vital signs to a centralized monitoring screen. 
 
-* Data Transmitter process the collected vital signs data and transmit to Kafka stream(a distributed event streaming platform that handles real-time data feeds) 
+* Data Transmitter process the collected vital signs data and transmit to Kafka stream (a distributed event streaming platform that handles real-time data feeds) 
 
 * Kafka Stream send the data to Realtime stream processor (Flink) 
 
@@ -261,10 +261,11 @@ The diagram represents the workflow of a medical software system designed to mon
 * Realtime stream processor also stores vital sign to Timeseries database which is used by Data Analyzer as well as Snapshot Processor
 
 * Data Analyzer
-	Rule Engine: A critical component that aids in adjusting alerts based on specific parameters, ensuring that the system remains adaptive and responsive 
-					    to varying patient conditions.
-	Stream Analytics: Analyze the patients' vitals against the rules from Rule engine and Sent notification to Notification Publisher to notify the Mecical staff. 
-	Alert Config APIs: To update the alert configurtion
+	Rule Engine: A critical component that aids in adjusting alerts based on specific parameters, ensuring that the system remains adaptive and responsive to varying patient conditions.
+	
+* Stream Analytics: Analyze the patients' vitals against the rules from Rule engine and Sent notification to Notification Publisher to notify the Mecical staff.
+
+* Alert Config APIs: To update the alert configuration
 
 * Notification Publisher push the notification to Medical professional devices like Stay Healthy Mobile App.
 
@@ -276,7 +277,7 @@ Overall, the diagram meticulously outlines the interconnected components and pro
 ![System Architecture](Images/SystemArchitecture.png)
 
 
-## Operational Viewpoint
+## Operational ViewPoint
 Describes how the system will be operated when it is running in the hospital facility. 
 
 * **Nurse Station**: Here nurse need to login to app with Monitoring Interface role to access and monitor patient's vital data. This is the monitoring interface where nurses observe a patient's vital data. The screen displays one patient's data at a time, automatically transitioning to the next patient every five seconds. If a patient's threshold alert is activated, an alert will appear at the top of the screen. These alerts will persist and require nurse acknowledgment before they can be dismissed. If alerts are activated for multiple patients, they will appear sequentially, one following the other.
