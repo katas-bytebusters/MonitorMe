@@ -57,7 +57,7 @@ Team ByteBusters. We are all about proposing solutions to make hospitals a littl
 
 ## Requirements
 
-For the original requirements please follow [HERE](./Requirements/OriginalRequirements.md)
+For the original requirements please follow [here](./Requirements/OriginalRequirements.md)
 
 ### Functional Requirements
 - **Real-Time Data Capture**: Capture vital signs data in real-time from various monitoring devices.
@@ -111,7 +111,8 @@ For the original requirements please follow [HERE](./Requirements/OriginalRequir
 - Regular security assessments, penetration testing, and compliance audits are conducted to ensure adherence to industry standards and regulations.
 
 ## Proposed Architecture
-Identified key architectural characteristics during requirements analysis as mentioned below. Additional details are captured here: [System Componencts Overview document](./Requirements/SystemComponentsOverview.md)
+Identified key architectural characteristics during requirements analysis as mentioned below. 
+Additional details are covered here: [System Components Overview](./Requirements/SystemComponentsOverview.md)
 
 ### **Characteristics**
 
