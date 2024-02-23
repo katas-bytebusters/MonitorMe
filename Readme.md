@@ -57,7 +57,7 @@ Team ByteBusters. We are all about proposing solutions to make hospitals a littl
 
 ## Requirements
 
-For the original requirements please follow [Original Requirements](./Requirements/OriginalRequirements.md)
+For the original requirements please follow [HERE](./Requirements/OriginalRequirements.md)
 
 ### Functional Requirements
 - **Real-Time Data Capture**: Capture vital signs data in real-time from various monitoring devices.
@@ -76,12 +76,12 @@ For the original requirements please follow [Original Requirements](./Requiremen
 
 - **Analyze each patient’s vital signs in real-time**: The ability to analyze patient data in real-time, compare it to given threshold limits, and send notifications to the nurse station and mobile devices.
 
-- **Deployment**: Deployment of MonitorMe should consider an on-premises environment.
+- **Deployment**: Deployment of MonitorMe system should consider in on-premises environment.
 
 - **Confidentiality**: Patient data should be secure.
 
 
-### [Non-functional Requirements]((./Requirements/SystemRequirements.md))
+## Non-functional Requirements
 
 - **Performance**: Ensure processing and display of vital signs data within 1 second for real-time monitoring efficiency.
 
@@ -111,7 +111,7 @@ For the original requirements please follow [Original Requirements](./Requiremen
 - Regular security assessments, penetration testing, and compliance audits are conducted to ensure adherence to industry standards and regulations.
 
 ## Proposed Architecture
-	Identified key architectural characteristics during requirements analysis as mentioned below
+Identified key architectural characteristics during requirements analysis as mentioned below. Additional details are captured here: [System Componencts Overview document](./Requirements/SystemComponentsOverview.md)
 
 ### **Characteristics**
 
