@@ -27,13 +27,13 @@
 
 
 ### About Team
-We are **Team ByteBuster**, a bunch of creative minds passionate about making hospitals friendlier and safer for patients. Imagine you are in a hospital, and there is a magical dashboard that keeps an eye on how patients are doing all the time. That's what we're trying to build. 
+We are **Team ByteBusters**, a bunch of creative minds passionate about making hospitals friendlier and safer for patients. Imagine you are in a hospital, and there is a magical dashboard that keeps an eye on how patients are doing all the time. That's what we're trying to build. 
 Our team is like a mix of architects, software engineers, computer whizzes and healthcare techy. We've teamed up to create something special a dashboard for hospital that will keeps track of patients vital records heart rate, Blood pressure, oxygen level, blood sugar, ECG,  body temperature & Sleep status. 
 This dashboard will help to reduce nurses workload and patients will have their privacy. This dashboard keep rotating for all patients vital but it is not just going to display patients vitals if something starts fluctuating MonitorMe software will not just sit ideal it will send alerts/notifications to doctors, medical professionals.
 
 We are not forgetting about privacy and security of patient informations. Patients vital secrets are safe with hospitals. We have built authentications method for our dashboard so only the right people can peek at your info.
 
-Team ByteBuster. We are all about proposing solutions to make hospitals a little smarter, safer and a more caring. Stick around, and you wll see proposal solution for magical dashboard.
+Team ByteBusters. We are all about proposing solutions to make hospitals a little smarter, safer and a more caring. Stick around, and you wll see proposal solution for magical dashboard.
 
 
 ![Alt text](Images/HighLevelDiagram.png)
