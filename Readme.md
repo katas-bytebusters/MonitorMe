@@ -76,7 +76,7 @@ For the original requirements please follow [Original Requirements](./Requiremen
 
 - **Analyze each patient’s vital signs in real-time**: The ability to analyze patient data in real-time, compare it to given threshold limits, and send notifications to the nurse station and mobile devices.
 
-- **Deployment**: Deployment of MonitorME should consider an on-premises environment.
+- **Deployment**: Deployment of MonitorMe should consider an on-premises environment.
 
 - **Confidentiality**: Patient data should be secure.
 
@@ -117,19 +117,16 @@ For the original requirements please follow [Original Requirements](./Requiremen
 
 | Top     | Characterstic       | Details                                                                                            |
 | ------- | ------------------- | -------------------------------------------------------------------------------------------        |
-|  X      | Performance         | The MonitorME app should perform efficiently to deliver real-time patient vital data.   |
-|  X      | Fault Tolerance     | This is critical. Even if any of the vital sign devices fail, MonitorME must continue to function for other vital monitoring tasks, including monitoring, recording, analyzing, and issuing alerts.|
-|  X      | Scalability         | MonitorME should have the capability to scale in the future to accommodate an increased patient load.|
+|  X      | Performance         | The MonitorMe app should perform efficiently to deliver real-time patient vital data.   |
+|  X      | Fault Tolerance     | This is critical. Even if any of the vital sign devices fail, MonitorMe must continue to function for other vital monitoring tasks, including monitoring, recording, analyzing, and issuing alerts.|
+|  X      | Scalability         | MonitorMe should have the capability to scale in the future to accommodate an increased patient load.|
 |         | Deploybility        | Deployment should consider an on-premises environment.|
-|         | Configurability     | MonitorME's vital sign machine or rule engine should be configurable.|
+|         | Configurability     | MonitorMe's vital sign machine or rule engine should be configurable.|
 |         | Data Integrity      | Data should be secure, and transmitting data from one environment to another should be encrypted|
-|         | Adaptability        | The MonitorME app should possess the flexibility to easily incorporate new devices, rules, or other elements as required.|
+|         | Adaptability        | The MonitorMe app should possess the flexibility to easily incorporate new devices, rules, or other elements as required.|
 
 
 The team chose an event-driven architecture as the best fit, in line with the main characteristics identified. 
-
-Refer this link contains detailed analysis on selecting the architectural style  [Architectural Style Analysis](./Arachitecture/architecturalstyleanalysis.md)
-
 
 ![Architecture Styles Worksheet](Images/ArchitectureStylesworksheet.png)
 
@@ -227,7 +224,7 @@ One advantage of the proposed  application in the solution framework is the inte
 
 ### Data flow/Information Flow Diagram
 
-Based on functional requirements we identified data flow **MonitorME** application should support. The data flow for our application begins with integrating Data Ingesion Pipeline with Patient Monitoring Equipments to capture the patient's vital information.
+Based on functional requirements we identified data flow **MonitorMe** application should support. The data flow for our application begins with integrating Data Ingesion Pipeline with Patient Monitoring Equipments to capture the patient's vital information.
 
 * **Data Ingesion Pipeline**: Collects data from various vital sign monitoring devices via automated feeds, ensuring accurate and timely data capture, process/transform the data and publish to multiple downstream systems in real time.
 
@@ -249,7 +246,7 @@ Based on functional requirements we identified data flow **MonitorME** applicati
 ### System Architecture
 
 
-The diagram represents the workflow of a medical software system designed to monitor and manage patient vital signs in real-time. MonitorME is responsible for sending real-time updates regarding patients' vital signs to a centralized monitoring screen. 
+The diagram represents the workflow of a medical software system designed to monitor and manage patient vital signs in real-time. MonitorMe is responsible for sending real-time updates regarding patients' vital signs to a centralized monitoring screen. 
 
 * Data Transmitter process the collected vital signs data and transmit to Kafka stream(a distributed event streaming platform that handles real-time data feeds) 
 
@@ -303,7 +300,7 @@ Deploying a real-time dashboard for monitoring hospital patient vitals on-premis
 * Data encryption, access controls, and audit trails are implemented to protect sensitive patient information.
 
 
-**High Availability and Disaster Recovery**: MonitorME app will be configured with high availability and disaster recovery mechanisms to ensure continuous availability of the real-time dashboard in case of hardware failures or natural disasters. Following factors will be considered to minimize downtime and data loss such as
+**High Availability and Disaster Recovery**: MonitorMe app will be configured with high availability and disaster recovery mechanisms to ensure continuous availability of the real-time dashboard in case of hardware failures or natural disasters. Following factors will be considered to minimize downtime and data loss such as
 * Data replication
 * Load balancing
 * Failover clustering
