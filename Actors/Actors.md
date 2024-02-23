@@ -77,44 +77,44 @@ Patients are not directly interactive with the system, we are just monitoring/an
 - *Interactions:*
   - Extract and analyze data, contribute to system improvement discussions.
 
-#### Hardware and Software
+### Hardware and Software
 
-### Server Infrastructure:
+#### Server Infrastructure:
 - *Role & Needs:*
   - Serve as the backbone of MonitorMe, hosting applications, databases, and ensuring high availability, scalability, and security of the system.
 
 - *Interactions:*
   - Host the core software components of MonitorMe, manage data storage, processing, and provide secure access to authorized users.
 
-### Networking Equipment:
+#### Networking Equipment:
 - *Role & Needs:*
   - Essential for maintaining robust and secure communications between the various components of the system.
 
 - *Interactions:*
   - Facilitate the transfer of data across the system, ensuring secure and efficient communication.
 
-### Data Storage Solutions:
+#### Data Storage Solutions:
 - *Role & Needs:*
   - Store vast amounts of time-sensitive and historical patient data securely and efficiently.
 
 - *Interactions:*
   - Securely store and manage access to patient data, allowing for efficient data retrieval.
 
-### Monitoring and Management Tools:
+#### Monitoring and Management Tools:
 - *Role & Needs:*
   - Allow IT and system administrators to oversee system performance and manage configurations.
 
 - *Interactions:*
   - Used by IT staff to monitor system operations, perform maintenance tasks, and ensure smooth operation.
 
-### Application Software (MonitorMe and Associated Applications):
+#### Application Software (MonitorMe and Associated Applications):
 - *Role & Needs:*
   - The primary interface for users, facilitating the monitoring, analysis, and management of patient data.
 
 - *Interactions:*
   - Process, display, and analyze patient data, manage user interactions.
 
-### End-User Devices (Computers, Tablets, Smartphones):
+#### End-User Devices (Computers, Tablets, Smartphones):
 - *Role & Needs:*
   - Enable access to the MonitorMe system for users on the go or at the bedside.
 
