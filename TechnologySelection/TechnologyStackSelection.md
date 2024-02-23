@@ -42,6 +42,6 @@ This document outlines the technology stack selection for each component of the 
 
 ## Additional Considerations
 - **Security**: Implement SSL/TLS for secure data transmission and OAuth 2.0 for secure API access. Ensure data at rest is encrypted using AES-256 or similar standards.
-- **Development Practices**: Embrace CI/CD practices using tools like Jenkins or GitLab CI for automated testing and deployment, enhancing the system's reliability and deployability.
+- **Development Practices**: Embrace CI/CD practices using tools like Jenkins or Github Actions for automated testing and deployment, enhancing the system's reliability and deployability.
 
 The chosen technology stack is designed to meet the MonitorMe system's performance, scalability, reliability, and security requirements, leveraging modern, proven technologies for robust application development.
