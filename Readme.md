@@ -116,7 +116,7 @@ For the original requirements please follow [here](./Requirements/OriginalRequir
 ## Actors
 MonitorMe system interacts with a diverse range of users and systems, each playing a critical role in its functionality and operational ecosystem. To provide a clear understanding of these interactions and the expectations from each actor involved with our project, we have detailed the roles, needs, and interactions of each actor in our dedicated [Actors](./Actors/Actors.md) section.
 
-This document includes comprehensive information on the various actors such as Nurses/Clinical Staff, Medical Professionals (Doctors/Physicians), Patients, Vital Sign Monitoring Devices, and more, outlining their specific roles and how they interact with our system. Understanding these actors is crucial for grasping the full scope of our project's impact and its operational dynamics.
+This document includes comprehensive information on the various actors such as **Nurses/Clinical Staff, Medical Professionals (Doctors/Physicians), Patients, Vital Sign Monitoring Devices,** and more, outlining their specific roles and how they interact with our system. Understanding these actors is crucial for grasping the full scope of our project's impact and its operational dynamics.
 
 ## Proposed Architecture
 Identified key architectural characteristics during requirements analysis as mentioned below. 
@@ -135,7 +135,7 @@ Additional details are covered here: [System Components Overview](./Requirements
 |         | Adaptability        | The MonitorMe app should possess the flexibility to easily incorporate new devices, rules, or other elements as required.|
 
 
-The team chose an <u>event-driven architecture</u> as the best fit, in line with the main characteristics identified. 
+The team chose an **event-driven architecture** as the best fit, in line with the main characteristics identified. 
 
 ![Architecture Styles Worksheet](Images/ArchitectureStylesworksheet.png)
 
