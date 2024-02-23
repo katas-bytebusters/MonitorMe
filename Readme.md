@@ -27,13 +27,15 @@
 
 
 ### About Team
-We are **Team ByteBusters**, a bunch of creative minds passionate about making hospitals friendlier and safer for patients. Imagine you are in a hospital, and there is a magical dashboard that keeps an eye on how patients are doing all the time. That's what we're trying to build. 
-Our team is like a mix of architects, software engineers, computer whizzes and healthcare techy. We've teamed up to create something special a dashboard for hospital that will keeps track of patients vital records heart rate, Blood pressure, oxygen level, blood sugar, ECG,  body temperature & Sleep status. 
-This dashboard will help to reduce nurses workload and patients will have their privacy. This dashboard keep rotating for all patients vital but it is not just going to display patients vitals if something starts fluctuating MonitorMe software will not just sit ideal it will send alerts/notifications to doctors, medical professionals.
+We are **Team ByteBusters**, a bunch of creative minds passionate about making hospitals friendlier and safer for patients. Imagine being in a hospital with a magical dashboard that continuously monitors patient well-being. That's what we're aiming to build.
 
-We are not forgetting about privacy and security of patient informations. Patients vital secrets are safe with hospitals. We have built authentications method for our dashboard so only the right people can peek at your info.
+Our team is a blend of architects, software engineers, computer whizzes, and healthcare tech enthusiasts. We've joined forces to create something special: a dashboard for hospitals that tracks patient vital signs—heart rate, blood pressure, oxygen levels, blood sugar, ECG, body temperature, and sleep status.
 
-Team ByteBusters. We are all about proposing solutions to make hospitals a little smarter, safer and a more caring. Stick around, and you wll see proposal solution for magical dashboard.
+This dashboard is designed to reduce nurses' workloads and ensure patient privacy. It doesn't just display patient vitals; if any sign starts fluctuating, our MonitorMe software springs into action, sending alerts/notifications to doctors and medical professionals.
+
+We are deeply committed to the privacy and security of patient information. Rest assured, patients' vital secrets are safe with the hospital. We've implemented authentication methods for our dashboard to ensure that only authorized personnel can access this information.
+
+Team ByteBusters is all about devising solutions to make hospitals smarter, safer, and more caring. Stick around, and you'll see our proposed solution for this magical dashboard.
 
 
 ![Alt text](Images/HighLevelDiagram.png)
@@ -57,7 +59,7 @@ Team ByteBusters. We are all about proposing solutions to make hospitals a littl
 
 ## Requirements
 
-For the original requirements please follow [Original Requirements](./Requirements/OriginalRequirements.md)
+For the original requirements please follow [here](./Requirements/OriginalRequirements.md)
 
 ### Functional Requirements
 - **Real-Time Data Capture**: Capture vital signs data in real-time from various monitoring devices.
@@ -76,12 +78,12 @@ For the original requirements please follow [Original Requirements](./Requiremen
 
 - **Analyze each patient’s vital signs in real-time**: The ability to analyze patient data in real-time, compare it to given threshold limits, and send notifications to the nurse station and mobile devices.
 
-- **Deployment**: Deployment of MonitorMe should consider an on-premises environment.
+- **Deployment**: Deployment of MonitorMe system should consider in on-premises environment.
 
 - **Confidentiality**: Patient data should be secure.
 
 
-### [Non-functional Requirements]((./Requirements/SystemRequirements.md))
+## Non-functional Requirements
 
 - **Performance**: Ensure processing and display of vital signs data within 1 second for real-time monitoring efficiency.
 
@@ -111,7 +113,8 @@ For the original requirements please follow [Original Requirements](./Requiremen
 - Regular security assessments, penetration testing, and compliance audits are conducted to ensure adherence to industry standards and regulations.
 
 ## Proposed Architecture
-	Identified key architectural characteristics during requirements analysis as mentioned below
+Identified key architectural characteristics during requirements analysis as mentioned below. 
+Additional details are covered here: [System Components Overview](./Requirements/SystemComponentsOverview.md)
 
 ### **Characteristics**
 
