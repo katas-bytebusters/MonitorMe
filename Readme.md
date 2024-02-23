@@ -7,6 +7,7 @@
 2.  [**Requirement**](#requirements)
      - [**Functional Requirements**](#functional-requirements)
      - [**Non-Functional Requirements**](#non-functional-requirements)
+	 - [**Architecture Characteristics Analysis**](#architecture-characteristics-Analysis)
 	 - [**Assumptions**](#assumptions)
 3.  [**Actors**](#actors)
 4.  [**Proposed Architecture**](#proposed-architecture)
@@ -60,7 +61,7 @@ Team ByteBusters is all about devising solutions to make hospitals smarter, safe
 
 ## Requirements
 
-For the original requirements please follow [here](./Requirements/OriginalRequirements.md)
+For the original requirements, please follow [here](./Requirements/OriginalRequirements.md)
 
 ## Functional Requirements
 - **Real-Time Data Capture**: Capture vital signs data in real-time from various monitoring devices.
@@ -106,6 +107,8 @@ For the original requirements please follow [here](./Requirements/OriginalRequir
 
 - **Adaptability**: - Monitor me is a new line of business for StayHealthy, this new app should be able to adapt new changes to meet the market demands.
  
+## Architecture Characteristics Analysis
+The foundation of our system's design is detailed in the "Architecture Characteristics Analysis" document, where we outline the essential attributes such as scalability, security, reliability, and performance that our architecture aims to embody. This analysis ensures our architecture is robust, adaptable, and aligned with both current and future needs. Detailed analysis is captured [here](./Requirements/SystemRequirements.md)
 
 ## Assumptions
 
